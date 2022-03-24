@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+  }
+
+.column{
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.row{
+    margin: 0;
+    background:lightslategray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    display: table;
+    clear: both;
+    column-gap: 100px;
+}
+
+#naslov{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#font{
+    font-family: Garamond, serif;
+    text-align: center;
+}
+
+::placeholder{
+    font-family: 'Courier New', monospace;
+}
+
+#inp{
+    background-color: #fafafa;
+    border:0;
+    box-shadow:0 0 4px rgba(0,0,0,0.3);
+    transition: .3s box-shadow;
+}
+
+#inp:hover{
+    box-shadow:0 0 4px rgba(0,0,0,0.5);
+}
+
