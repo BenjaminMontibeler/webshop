@@ -18,13 +18,32 @@ session_start();
               </button>
               <a class="navbar-brand" href="brnja2.php">B R N J A</a>
               <div class="cart">
-                  <a class="navbar-brand" href="cart.php">cart  <span id="cart-item" class="badge bg-dark"></span></a>
+              <?php
+                    if(isset($_SESSION["name"])){
+                      echo "
+                      <a class='navbar-brand' href='cart.php'>cart  <span id='cart-item' class='badge bg-dark'></span></a>";
+                    } else{
+                      echo "
+                      <p class=''>GUEST</p>";
+                    
+                    }
+                  ?>
+                  
               </div>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" href="all.php">Products</a>
-                  </li>
+                <?php
+                    if(isset($_SESSION["name"])){
+                      echo " <li class='nav-item'>
+                      <a class='nav-link' href='all.php'>Products</a>
+                    </li> ";
+                    } else{
+                      echo " <li class='nav-item'>
+                      <p class='nav-link'>Login/Register to see items</p>
+                    </li> ";
+                    
+                    }
+                  ?>
                   <li class="nav-item">
                     <a class="nav-link" href="about.php">About</a>
                   </li>
